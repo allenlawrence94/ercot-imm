@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ercot:
+    restart: always
+    build:
+      context: .
+    image: ercot:latest
+    container_name: ercot
+    volumes:
+      - "${PWD}:/root/work"
+    working_dir: "/root/work"
+    ports:
+      - "8888:8888"

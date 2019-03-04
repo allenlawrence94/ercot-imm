@@ -1,0 +1,13 @@
+FROM allenlawrence94/jupyter-base:latest
+
+#RUN conda config --set auto_update_conda false
+RUN conda install -c conda-forge cvxopt --yes
+
+#RUN mkdir /opt/py
+#ADD src/mipcl-py-1.8.2.linux-x86_64.tar.gz /opt/py/
+#ADD src/mipcl-1.8.2.linux-x86_64.tar.gz /opt/py/
+#RUN cd /opt/py/mipcl_py/mipshell && \
+#    ln -s mipcl-py3.so mipcl.so && \
+#    export PYTHONPATH=$PYTHONPATH:/opt/py
+#
+RUN conda install pandas numpy --yes
