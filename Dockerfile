@@ -1,3 +1,6 @@
-FROM ubuntu
+FROM allenlawrence94/jupyter-base:latest
 
-ADD src/mipcl-1.8.2.linux-x86_64.tar.gz /opt/
+#RUN conda config --set auto_update_conda false
+RUN conda install -c conda-forge cvxopt --yes
+
+RUN conda install pandas numpy --yes
